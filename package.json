@@ -1,0 +1,22 @@
+{
+  "name": "Conversor_Temperatura",
+  "version": "1.0.0",
+  "description": "Practica 2 de STW (Conversor de Temperatura)",
+  "main": "temperature.js",
+  "scripts": {
+    "test": "open tests/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alu0100763379/Conversor_Temperatura.git"
+  },
+  "keywords": [
+    "conversor"
+  ],
+  "author": "Alejandro Ravelo Moreno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alu0100763379/Conversor_Temperatura/issues"
+  },
+  "homepage": "https://github.com/alu0100763379/Conversor_Temperatura"
+}
