@@ -4,7 +4,7 @@ function calculate() {
   var temp = original.value; //almacena en el, la variable temp el valor original.
   var conversor = /([-+]?\d+(?:\.\d*)?)\s*([fFcC])/;
   
-  var m = temp.match(regexp);
+  var m = temp.match(conversor);
   
   if (m) {
     var num = m[1]; // lo que cogio los parentesis
