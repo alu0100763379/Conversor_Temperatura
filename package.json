@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/alu0100763379/Conversor_Temperatura/issues"
   },
-  "homepage": "https://github.com/alu0100763379/Conversor_Temperatura"
+  "homepage": "https://github.com/alu0100763379/Conversor_Temperatura",
+  "devDependencies": {
+    "chai": "^3.3.0"
+  }
 }
