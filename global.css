@@ -1,14 +1,14 @@
-th, td      { vertical-align: top; text-align: right; font-size:large; }     /* Don't center table cells  */
-#converted  { color: red; font-weight: bold; font-size:large;          }     /* Calculated values in bold */
+th, td      { vertical-align: top; text-align: right; font-size:large; }     
+#converted1  { color: #0174DF; font-weight: bold; font-size:medium;          }
+#converted2  { color: #04B431; font-weight: bold; font-size:medium;          }     
 input       { 
-              text-align: right;       /* Align input to the right  */
+              text-align: right;       
               border: none; 
               border-radius: 20px 20px 20px 20px;
               padding: 5px  5px;
               font-size:large;       }
 body
 {
- background-color:#b0c4de;  /* blue */
  font-size:large;
  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
 }
@@ -16,9 +16,12 @@ body
 h1 {
     font-weight: normal;
     font-family: "Brush Script MT", cursive;
-    background: #3C5681;
+    background: #B40404;
     padding: 5px 15px;
     color: white;
     display:inline-block;
     border-radius: 10px 10px 10px 10px;
+}
+html {
+  background-image: url("imagen7.jpg");
 }
