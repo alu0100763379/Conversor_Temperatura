@@ -17,11 +17,17 @@ function calculate() {
       result2 = num + 273.15;
       result2 = result2.toFixed(1)+" Kelvin"
     }
-    else {
+    else if (type == 'f' || type == 'F'){
       result1 = (num - 32)*5/9;
       result1 = result1.toFixed(1)+" Celsius"
       result2 = ((num - 32)*5/9) + 273.15;
       result2 = result2.toFixed(1)+" Kelvin"
+    }
+    else{
+      result1 = num - 273.15;
+      result1 = result1.toFixed(1)+" Celsius"
+      result2 = (num * 9/5) - 459.67;
+      result2 = result2.toFixed(1)+" Farenheit"
     }
     converted1.innerHTML = result1;
     converted2.innerHTML = result2;
