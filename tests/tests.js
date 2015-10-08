@@ -40,6 +40,6 @@ suite('temperature', function() {
     test('10X = error', function() {
         original.value = "10X";
         calculate();
-        assert.match(converted1.innerHTML, /ERROR/);
+        assert.match(converted.innerHTML, /ERROR/);
     });
 });

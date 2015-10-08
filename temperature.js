@@ -33,6 +33,6 @@ function calculate() {
     converted2.innerHTML = result2;
   }
   else {
-    converted1.innerHTML = "ERROR! Try something like '-4.2C' instead";  //no es una entrada valida
+    converted.innerHTML = "ERROR! Intenta poner algo como:'-4.2C'";  //no es una entrada valida
   }
 }
