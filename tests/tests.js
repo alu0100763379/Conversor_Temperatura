@@ -49,13 +49,13 @@ suite('temperature', function() {
         assert.match(converted.innerHTML, /ERROR/);
     });
     test('Resultado == String', function() {
-        insert.value = "-27.18C";
+        original.value = "-27.18C";
         conversor();
         assert.isString(converted1.innerHTML);
     });
     // Compruebo que el resultado no es de tipo Number
     test('Resultado != Number', function() {
-        insert.value = "18.27K";
+        original.value = "18.27K";
         conversor();
         assert.isNotNumber(converted2.innerHTML);
     });
