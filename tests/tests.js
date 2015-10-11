@@ -37,9 +37,26 @@ suite('temperature', function() {
         assert.deepEqual(converted2.innerHTML, "87.5 Farenheit"); 
         assert.deepEqual(converted1.innerHTML, "30.9 Celsius");   
     });
+    test('12C = 285.1 Kelvin', function() {
+        original.value = "12C";
+        calculate();
+        assert.notDeepEqual(converted1.innerHTML, "85.1 Kelvin");
+        assert.notDeepEqual(converted2.innerHTML, "253.6 Farenheit");
+    });
     test('10X = error', function() {
         original.value = "10X";
         calculate();
         assert.match(converted.innerHTML, /ERROR/);
+    });
+    test('Resultado == String', function() {
+        insert.value = "-27.18C";
+        conversor();
+        assert.isString(converted1.innerHTML);
+    });
+    // Compruebo que el resultado no es de tipo Number
+    test('Resultado != Number', function() {
+        insert.value = "18.27K";
+        conversor();
+        assert.isNotNumber(converted2.innerHTML);
     });
 });
