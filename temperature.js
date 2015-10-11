@@ -3,14 +3,40 @@ function calculate() {
   var result1;
   var result2;
   var temp = original.value; //almacena en el, la variable temp el valor original.
-  var conversor = /([-+]?\d+(?:\.\d*)?)\s*([fFcCkK])/;
-  
+  var conversor = /(^[-+]?\d+(?:\.\d*)?)(?:[eE]?([-+]?\d+))?\s*([fFcCkK])/; ///([-+]?\d+(?:\.\d*)?)\s*([fFcCkK])/;
+                  
   var m = temp.match(conversor);
   
   if (m) {
-    var num = m[1]; // lo que cogio los parentesis
-    var type = m[2]; // lo que cogio los segundos parentesis si son celcius o farengeis
+    var num = m[1]; // lo que cogió el primer parentesis (el nº)
+    var type = m[3]; // lo que cogieron los segundos parentesis si son celcius, farenheit o kelvin
     num = parseFloat(num);
+    if (m[2] !== undefined){
+      var exp = m[2];
+      exp = parseInt(exp); // Convierte una string en entero
+
+      if (exp<0){
+        exp = -exp; 
+        var cnt = 1, divide = 10;
+
+        while(cnt < exp){
+          divide = divide * 10;
+          cnt++; 
+        }
+
+        if(divide !== 0) num = num/divide;
+
+      } 
+      else {
+        var cnt = 1, divide = 10;
+
+        while(cnt < exp){
+          divide = divide * 10;
+          cnt++; 
+        }
+        if(divide !== 0) num = num*divide; 
+      }
+    }
     if (type == 'c' || type == 'C') {
       result1 = (num * 9/5)+32;
       result1 = result1.toFixed(1)+" Farenheit"
