@@ -35,5 +35,7 @@ function calculate() {
   }
   else {
     converted.innerHTML = "ERROR! Intenta poner algo como:'-4.2C'";  //no es una entrada valida
+    converted1.innerHTML = "";
+    converted2.innerHTML = "";
   }
 }
